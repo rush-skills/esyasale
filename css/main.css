@@ -42,7 +42,7 @@ html, body {
 
 /* additional sections */
 #home {
-  background: url(../img/tedx-header.png) no-repeat center center fixed; 
+  background: url(../img/tedx-header.jpg) no-repeat center center fixed; 
   display: table;
   height: 100%;
   position: relative;

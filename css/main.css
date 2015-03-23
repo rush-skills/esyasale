@@ -358,6 +358,7 @@ footer .glyphicon:hover {
 .team-member{
 	height:250px;
   max-width: 250px;
+  min-width: 230px;
 	margin-left: auto;
 	margin-right: auto;
 }

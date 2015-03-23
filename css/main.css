@@ -392,3 +392,30 @@ footer .glyphicon:hover {
     margin-right: auto;
   }
 }
+
+@media (max-width:850px){
+  
+  #home {
+    background: url(../img/tedx-header.jpg) no-repeat fixed; 
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media (max-width:550px){
+  
+  #home {
+    display: none;
+  }
+}
+@media (min-width:550px){
+  
+  #rhome {
+    display: none;
+  }
+}

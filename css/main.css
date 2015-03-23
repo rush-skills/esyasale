@@ -355,15 +355,15 @@ footer .glyphicon:hover {
 .lead{
 	font-size: 18px;
 }
+#team{
+  text-align: center;
+}
 .team-member{
 	height:250px;
   max-width: 250px;
   min-width: 230px;
 	margin-left: auto;
 	margin-right: auto;
-}
-#team{
-	text-align: center;
 }
 @media (max-width:1000px){
   .team-member{
@@ -417,5 +417,40 @@ footer .glyphicon:hover {
   
   #rhome {
     display: none;
+  }
+}
+
+.speaker{
+  height:300px;
+  max-width: 300px;
+  min-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width:1000px){
+  .speaker{
+    height:250px;
+    max-width: 250px;
+    min-width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width:300px){
+  .speaker{
+    height:150px;
+    max-width: 150px;
+    min-width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width:200px){
+  .speaker{
+    height:100px;
+    max-width: 100px;
+    min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

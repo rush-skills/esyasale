@@ -344,6 +344,13 @@ footer .glyphicon:hover {
 .logo{
 	max-width: 500px;
 }
+.logo-tedx{
+	max-width: 400px;
+}
+
 .info{
 	padding: 40px;
+}
+.lead{
+	font-size: 18px;
 }

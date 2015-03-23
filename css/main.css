@@ -54,6 +54,7 @@ html, body {
 }
 
 #about {
+  padding: 5%;
 }
 
 #speakers {
@@ -61,7 +62,7 @@ html, body {
   /*background: url(../img/white-top.png) no-repeat top #f4f4f4;*/
   background: #f4f4f4;
   /*background-size: 120% auto;*/
-  padding-top: 5%;
+  padding: 5%;
   margin: 0 auto;
 }
 #speakers .glyphicon {
@@ -87,7 +88,7 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
 }
-#information .container {
+#information .container-fluid {
     background: url(../img/black.png) no-repeat bottom;
     background-size: 120% auto;
     padding-bottom: 100px; }
@@ -106,7 +107,7 @@ html, body {
   padding-bottom: 100px; 
 }
 
-#contact{
+#team{
 	text-align: center;
   background-color: #111;
   padding: 4%;
@@ -353,4 +354,13 @@ footer .glyphicon:hover {
 }
 .lead{
 	font-size: 18px;
+}
+.team-member{
+	height:250px;
+  max-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#team{
+	text-align: center;
 }

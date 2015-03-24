@@ -4,7 +4,7 @@
    Author's custom styles
    ========================================================================== */
 
-
+/** { font-family: ‘Metrophobic’, Arial, serif; font-weight: 400; }*/
 
 
 /* general styles */
@@ -78,7 +78,7 @@ html, body {
 }
 
 #information {
-  background: url(../img/iiitd1.jpg) no-repeat center center fixed; 
+  background: url(../img/iiitd4.jpg) no-repeat center center fixed; 
   display: table;
   height: 800px;
   position: relative;
@@ -93,9 +93,10 @@ html, body {
     background-size: 120% auto;
     padding-bottom: 100px; }
 #information .panel {
-  background: rgba(0, 0, 0, 0.5);
-  color: #aaa;
-  font-size: 24px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ddd;
+  font-size: 20px;
+  padding: 5%;
 }
 #schedule{
 

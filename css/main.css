@@ -486,8 +486,14 @@ footer .glyphicon:hover {
 
 
 *{
-   font-family: 'colaborate-regularregular', Arial, sans-serif !important; 
+   font-family: 'Roboto', Arial, sans-serif !important; 
 }
 #information *{
    font-family: 'tuffyregular', Arial, sans-serif !important; 
+}
+.fa{
+  font-family: 'FontAwesome' !important;
+}
+.glyphicon{
+  font-family: 'Glyphicons Halflings' !important;
 }

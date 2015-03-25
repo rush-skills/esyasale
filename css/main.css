@@ -460,3 +460,34 @@ footer .glyphicon:hover {
     margin-right: auto;
   }
 }
+@font-face {
+    font-family: 'colaborate-regularregular';
+    src: url('/fonts/ColabReg-webfont.eot');
+    src: url('/fonts/ColabReg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ColabReg-webfont.woff') format('woff'),
+         url('/fonts/ColabReg-webfont.ttf') format('truetype'),
+         url('/fonts/ColabReg-webfont.svg#colaborate-regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'tuffyregular';
+    src: url('/fonts/Tuffy-webfont.eot');
+    src: url('/fonts/Tuffy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Tuffy-webfont.woff') format('woff'),
+         url('/fonts/Tuffy-webfont.ttf') format('truetype'),
+         url('/fonts/Tuffy-webfont.svg#tuffyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+*{
+   font-family: 'colaborate-regularregular', Arial, sans-serif !important; 
+}
+#information *{
+   font-family: 'tuffyregular', Arial, sans-serif !important; 
+}

@@ -1,2 +1,482 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>TEDxIIITD</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="favicon.ico" rel="shortcut icon" />
+        <link href="apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <%= stylesheet_link_tag 'application', media: 'all' %>
+        <%= javascript_include_tag 'application' %>
+        <%= csrf_meta_tags %>        
+        <!-- <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+
+        <script type="text/javascript">
+          // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          // ga('create', 'UA-56123120-2', 'auto');
+          // ga('send', 'pageview');
+
+        </script>
+         <script type="text/javascript">
+        //   var _gaq = _gaq || [];  
+        //   _gaq.push(['_setAccount', 'UA-56123120-2']);  
+        //   _gaq.push(['_trackPageview']);
+
+        //   (function() {
+        //     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        //     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        //   })();
+        // </script> 
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+   
+      <!-- first section - Home -->
+      <div id="home" class="home">
+        <div class="text-vcenter1">
+          <div class="btm-home"> 
+            <a href="#about" class="arrowicon pull-right"><i class="glyphicon glyphicon-chevron-down"></i><span></span></a>
+          </div>
+        </div>
+      </div>
+      <!-- /first section -->
+      <!-- first section - Mobile Home -->
+      <div id="rhome" class="rhome">
+        <div class="text-vcenter1 text-center">
+            <%= image_tag("tedx-iiitd-logo.png", class: "img img-responsive") %>
+            <h2>12th April, 2015</h2>
+        </div>
+        <hr>
+      </div>
+      <!-- /first section -->
+      <!-- second section - About -->
+      <div id="about" class="pad-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2>What is TED?</h2>
+              <p class="lead">TED is a non-profit organization devoted to Ideas Worth Spreading. It started out in 1984 as a conference bringing together people from three worlds- Technology, Entertainment and Design. Since then its scope has become ever broader. Along with two annual conferences - the TED Conference in Long Beach and Palm Springs each spring, and the TED Global Conference in Edinburgh UK each summer - TED includes the award-winning TED Talks video site, the Open Translation Project and TED Conversations, the inspiring TED Fellows and TEDx programs, and the annual TED Prize.</p>
+              <h3>What is TEDx?</h3>
+              <p class="lead">In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)</p>
+            </div>
+            <div class="col-sm-6 text-center">
+              <%= image_tag("tedx-iiitd-logo.png", class: "logo-tedx img-responsive") %>
+              <iframe width="100%" height="400" src="https://www.youtube.com/embed/N-l1xtCMnpw" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-6" style="margin-top: 16px;">
+              <iframe width="100%" height="400" src="https://www.youtube.com/embed/iDMujdUOY4o" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag("iiitd-logo.jpg", class: "logo img-responsive") %>
+              <h3>About IIITD</h3>
+              <p class="lead"><a href="http://iiitd.ac.in">IIIT-Delhi</a> (Indraprastha Institute of Information technology) is a State University established by the Govt. of NCT of Delhi. We at IIIT-D, seek to explore the new horizons of technology and mould the students into successful professional motivated to work for the society. Aligned with our pursuit of innovation, we announce TEDx IIITD. <br><br>We cordially invite you to this grand occasion, to come join us in our endeavours and partner with us in making this event a great success. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /second section -->
+      <!-- third section - Speakers -->
+      <div id="speakers" class="pad-section">
+        <div class="container-fluid">
+          <h2 class="text-center">Speakers</h2> <hr />
+          <div class="row text-center">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <%= image_tag("rj-naved-2.jpg", class: "img-responsive img-circle speaker") %>
+              <h4><a href="https://www.facebook.com/rjnaved">RJ Naved</a></h4>
+              <p>Being an RJ, he influences a wide variety of audience and tickles the funny bone with his one-liners and the all-famous murgas.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <%= image_tag("chhanv.png", class: "img-responsive speaker") %>
+              <h4><a href="http://chhanv.org/">Chhanv</a> </h4>
+              <p>Chhanv is an NGO which provides sustenance and shelter to acid attack survivors. They also provide a clean, safe and comfortable environment for the survivors and their families.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <%= image_tag("rohan murty.jpg", class: "img-responsive img-circle speaker") %>
+              <h4><a href="http://www.eecs.harvard.edu/~rohan/Home.html">Dr. Rohan Murty</a> </h4>
+              <p>Having a long list of fellowships at Harvard and MIT, Dr. Rohan Murty, son of the co-founder of Infosys- NR Narayana Murthy, has taken the initiative of Murty Classical Library. It's amazing how his interest spans not just the domain of computer science, but also humanities. He is an inspiration to all young engineers
+</p>
+            </div>
+            <!-- <div class="col-md-4 col-sm-6 col-xs-12">
+              <img class="img-responsive img-circle speaker" src="img/person.jpg">
+              <h4>Speaker Name</h4>
+              <p>Short description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in sem cras amet. Donec in sem cras amet.</p>
+            </div> -->
+          </div>
+            <h3 class="text-center">More Speakers Will be announced soon on our <a href="https://www.facebook.com/TEDxIIITD">Facebook Page</a></h3>
+          
+          </div>
+        </div>
+      </div>
+      <!-- /third section -->
+      <!-- fourth section - Information -->
+      <div id="information" class="">
+        <div class="container-fluid text-vcenter">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 ">
+              <div class="panel info">
+                "Where the mind is without fear and the head is held high<br>
+                Where knowledge is free<br>
+                Where the world has not been broken up into fragments<br>
+                By narrow domestic walls<br>
+                Where words come out from the depth of truth<br>
+                Where tireless striving stretches its arms towards perfection<br>
+                Where the clear stream of reason has not lost its way<br>
+                Into the dreary desert sand of dead habit<br>
+                Where the mind is led forward by thee<br>
+                Into ever-widening thought and action<br>
+                Into that heaven of freedom, my Father, let my country awake."<br><br>These very words by the great poet Rabindranath Tagore helped us envision the possibility of TEDx IIITD and after months of planning and preparations, with great pleasure and honour, we, the students of IIIT-D present to you,our very own TEDx IIITD.
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /fourth section -->
+      
+      <!-- fifth section - Schedule -->
+      <div id="schedule" class="">
+        <div class="container-fluid">
+    <div class="page-header">
+        <h1 id="timeline">Schedule</h1>
+    </div>
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-user"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Entry</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3:00 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-info-sign"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Details and Introduction</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3:30 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">1st Speaker</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 4:00 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">2nd Speaker</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 4:25 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">3rd Speaker</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 4:50 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-pause"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Break</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 5:15 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">4th Speaker</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 6:00 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">5th Speaker</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 6:25 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">6th Speaker</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 6:50 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-cutlery"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Dinner</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 7:15 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Conclusion</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 8:30 P.M.</small></p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+      </div>
+      <!-- /fifth section -->
+
+        <!-- Begin team -->
+      <div id="team">
+        <div class="container-fluid">
+        <div class="col-sm-12">
+          <h3>Team</h3>
+          <hr>
+          <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+              <img class="img-responsive img-circle teamhead" src="<%= asset_path 'team/prikankshit.JPG' %>">
+              <h4>Prikankshit S Mor</h4>
+              <p>
+                Organizer
+                <br>
+                <a href="https://www.facebook.com/prikankshit">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/taruvar.jpg' %>">
+              <h4>Taruvar Aggarwal</h4>
+              <p>
+                Executive Producer
+                <br>
+                <a href="https://www.facebook.com/taruvaraggarwal">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/harsh.jpg' %>">
+              <h4>Harsh Manocha</h4>
+              <p>
+                PR Head and Curator
+                <br>
+                <a href="https://www.facebook.com/harshmanocha">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/sarthak.jpg' %>">
+              <h4>Sarthak Bajaj</h4>
+              <p>
+                Mentor
+                <br>
+                <a href="https://www.facebook.com/sarthak.bajaj">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/ankur.jpg' %>">
+              <h4>Ankur Singh</h4>
+              <p>
+                Website and IT Head
+                <br>
+                <a href="https://www.facebook.com/rush.skills">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/kartik.jpg' %>">
+              <h4>Kartik Gupta</h4>
+              <p>
+                Web Manager and Designer
+                <br>
+                <a href="https://www.facebook.com/kartik.gupta.57">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/stuti.jpg' %>">
+              <h4>Stuti Goel</h4>
+              <p>
+                Logistics
+                <br>
+                <a href="https://www.facebook.com/stuti.goel.311">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/anjali.jpg' %>">
+              <h4>Anjali Ujjania</h4>
+              <p>
+                Web Manager and Designer
+                <br>
+                <a href="https://www.facebook.com/au2995">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/madhav.JPG' %>">
+              <h4>Madhav Varma</h4>
+              <p>
+                PR Team and Curator
+                <br>
+                <a href="https://www.facebook.com/profile.php?id=100001166612656">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/agam.JPG' %>">
+              <h4>Agam Bajaj</h4>
+              <p>
+                Event Manager
+                <br>
+                <a href="https://www.facebook.com/agam.bajaj.311">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/arushi.JPG' %>">
+              <h4>Arushi Kumar</h4>
+              <p>
+                Logistics
+                <br>
+                <a href="https://www.facebook.com/arushi.kumar.73">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/vahini.JPG' %>">
+              <h4>Vahini Ummalaneni</h4>
+              <p>
+                PR Team and Curator
+                <br>
+                <a href="https://www.facebook.com/profile.php?id=773333076">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/siddhant.JPG' %>">
+              <h4>Siddhant Verma</h4>
+              <p>
+                Photography
+                <br>
+                <a href="https://www.facebook.com/verma.sid96">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+          </div>
+           <div class="row">
+           <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-4">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/siddharth.jpg' %>">
+              <h4>Siddharth Arya</h4>
+              <p>
+                Event Manager
+                <br>
+                <a href="https://www.facebook.com/siddharth.arya.14">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/lakshay.jpg' %>">
+              <h4>Lakshay Dahiya</h4>
+              <p>
+                Event Manager
+                <br>
+                <a href="https://www.facebook.com/lakshay.dahiya.12">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img class="img-responsive img-circle team-member" src="<%= asset_path 'team/raghav.jpg' %>">
+              <h4>Raghav Sehgal</h4>
+              <p>
+                PR Team and Curator
+                <br>
+                <a href="https://www.facebook.com/raghavsehgal1995">
+                  <i class="fa fa-facebook-official"></i>
+                </a>
+              </p>
+            </div>           
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+      <!-- google map -->
+      <div id="google_map"></div>
+      <!-- /google map -->
+
+      <!-- footer -->
+      <footer>
+        <!-- <hr /> -->
+        <div class="container-fluid">
+          <!-- <p class="text-right">Copyright &copy; Your Company 2014</p> -->
+        </div>
+      </footer>
+      <!-- /footer -->
+
+
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+    </body>
+</html>

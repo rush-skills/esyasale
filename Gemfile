@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem "omniauth-google-oauth2"
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -23,12 +24,10 @@ group :development do
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'quiet_assets'
   gem 'rails_layout'
+  gem 'puma'
 end
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rubocop'
-end
-group :production do
-  gem 'puma'
 end

@@ -13,6 +13,14 @@
 
 class Sale < ActiveRecord::Base
   belongs_to :user
-  has_many :tickets
-  validates :tickets, numericality: { less_than: Proc.new {|model| model.quantity }}
+  has_many :tickets 
+  validate :validate_ticket_count
+  validates :quantity, :presence => true
+  validates :end, :presence => true
+  validates :start, :presence => true
+  def validate_ticket_count
+     if self.tickets.count >= self.quantity
+       errors.add(:id, 'Error - Max ticket limit reached for this sale')
+     end
+  end
 end

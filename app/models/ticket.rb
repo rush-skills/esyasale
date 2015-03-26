@@ -14,6 +14,20 @@
 class Ticket < ActiveRecord::Base
   belongs_to :sale
   validates_associated :sale
+
+  validate :validate_user
+  validate :validate_time
+  def validate_user
+    unless Ticket.where(user_id: self.user_id).empty?
+       errors.add(:id, 'Error - You have already booked a ticket')
+     end
+  end
+
+  def validate_time
+    unless self.sale.start < Time.now and Time.now < self.sale.end
+      errors.add(:id, 'Error - Sale not running')
+    end
+  end
   belongs_to :user
   def status
   	if paid

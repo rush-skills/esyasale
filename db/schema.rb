@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326000958) do
+ActiveRecord::Schema.define(version: 20150326004249) do
+
+  create_table "sales", force: :cascade do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.integer  "quantity"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sales", ["user_id"], name: "index_sales_on_user_id"
+
+  create_table "tickets", force: :cascade do |t|
+    t.integer  "sale_id"
+    t.integer  "user_id"
+    t.boolean  "paid"
+    t.boolean  "blocked"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tickets", ["sale_id"], name: "index_tickets_on_sale_id"
+  add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

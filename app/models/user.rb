@@ -22,8 +22,10 @@
 #
 
 class User < ActiveRecord::Base
-  enum role: [:user, :vip, :admin]
+  enum role: [:user, :admin]
   after_initialize :set_default_role, :if => :new_record?
+  has_one :ticket
+  has_many :sale
 
   def set_default_role
     self.role ||= :user

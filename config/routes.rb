@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :tickets
+
+  resources :sales
+
   mount Upmin::Engine => '/admin'
   root to: 'visitors#index'
   resources :users

@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: tickets
+#
+#  id         :integer          not null, primary key
+#  sale_id    :integer
+#  user_id    :integer
+#  paid       :boolean
+#  blocked    :boolean
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sale_id: 
+  user_id: 
+  paid: false
+  blocked: false
+
+two:
+  sale_id: 
+  user_id: 
+  paid: false
+  blocked: false

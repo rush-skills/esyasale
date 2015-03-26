@@ -14,8 +14,5 @@
 class Sale < ActiveRecord::Base
   belongs_to :user
   has_many :tickets
-  def quantity
-  	self.quantity
-  end
-  validates :tickets, numericality: { less_than: quantity }
+  validates :tickets, numericality: { less_than: Proc.new {|model| model.quantity }}
 end

@@ -14,5 +14,8 @@
 class Sale < ActiveRecord::Base
   belongs_to :user
   has_many :tickets
-  validates :tickets, numericality: { less_than: self.quantity }
+  def quantity
+  	self.quantity
+  end
+  validates :tickets, numericality: { less_than: quantity }
 end

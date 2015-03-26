@@ -12,8 +12,16 @@
 #
 
 class Ticket < ActiveRecord::Base
-  belongs_to :sale, counter_cache: true
+  belongs_to :sale
   validates_associated :sale
   belongs_to :user
-
+  def status
+  	if paid
+  		"Paid"
+  	elsif blocked
+  		"Blocked"
+  	else
+  		"Booked"
+  	end
+  end
 end

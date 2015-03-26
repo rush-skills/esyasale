@@ -12,7 +12,7 @@ class SalePolicy
   end
 
   def show?
-    @current_user.admin?
+    false
   end
 
   def update?

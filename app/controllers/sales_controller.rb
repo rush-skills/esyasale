@@ -11,11 +11,6 @@ class SalesController < ApplicationController
     authorize  @sales
   end
 
-  # GET /sales/1
-  # GET /sales/1.json
-  def show
-    authorize  @sale
-  end
 
   # GET /sales/new
   def new
@@ -36,8 +31,8 @@ class SalesController < ApplicationController
     @sale.user = current_user
     respond_to do |format|
       if @sale.save
-        format.html { redirect_to @sale, notice: 'Sale was successfully created.' }
-        format.json { render :show, status: :created, location: @sale }
+        format.html { redirect_to sales_url, notice: 'Sale was successfully created.' }
+        format.json { render :show, status: :created, location: sales_url }
       else
         format.html { render :new }
         format.json { render json: @sale.errors, status: :unprocessable_entity }
@@ -52,8 +47,8 @@ class SalesController < ApplicationController
     @sale.user ||= current_user
     respond_to do |format|
       if @sale.update(sale_params)
-        format.html { redirect_to @sale, notice: 'Sale was successfully updated.' }
-        format.json { render :show, status: :ok, location: @sale }
+        format.html { redirect_to sales_url, notice: 'Sale was successfully updated.' }
+        format.json { render :show, status: :ok, location: sales_url }
       else
         format.html { render :edit }
         format.json { render json: @sale.errors, status: :unprocessable_entity }

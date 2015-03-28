@@ -8,7 +8,7 @@ class TicketPolicy
   end
 
   def new?
-    @current_user.user? and @current_user.ticket.nil? and current_sale?
+    @current_user.user? and @current_user.ticket.nil?
   end
 
   def index?

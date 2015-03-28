@@ -1,8 +1,9 @@
 class TicketsController < ApplicationController
   before_action :set_ticket, only: [:paid, :blocked]
   after_action :verify_authorized
+  before_filter :authenticate_user!
 
-
+  include ApplicationHelper
   # GET /tickets
   # GET /tickets.json
   def index
@@ -13,11 +14,13 @@ class TicketsController < ApplicationController
 
   # GET /tickets/new
   def new
-    @ticket = Ticket.new
-    authorize @ticket
-    @ticket.user = current_user
-    @ticket.sale = current_sale
-    @ticket.save!
+    if current_sale?
+      @ticket = Ticket.new
+      authorize @ticket
+      @ticket.user = current_user
+      @ticket.sale = current_sale
+      @ticket.save!
+    end
     redirect_to dashboard_path
   end
 
@@ -42,6 +45,7 @@ class TicketsController < ApplicationController
     @tickets = Ticket.all
     authorize @tickets
     @ticket = current_user.ticket
+    render(layout: false)
   end
 
 

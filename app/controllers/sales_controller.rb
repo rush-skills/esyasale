@@ -1,5 +1,6 @@
 class SalesController < ApplicationController
   before_action :set_sale, only: [:edit, :update, :destroy]
+  before_filter :authenticate_user!
   after_action :verify_authorized
 
   #Allow all actions, pundit ensures admin user, store current_user as creator

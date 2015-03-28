@@ -8,17 +8,6 @@ class ApplicationController < ActionController::Base
   def session_path(scope=nil)
     '/users/auth/google_oauth2'
   end
-  def root_path
-    if current_user 
-      if current_user.admin?
-        "/"
-      else
-        "/dashboard"
-      end
-    else
-      "/"
-    end
-  end
 
   include Pundit
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
@@ -35,7 +24,7 @@ class ApplicationController < ActionController::Base
   	'/'
   end
   def after_sign_in_path_for(resource)
-    '/users/' + current_user.id.to_s
+    '/dashboard'
     # return the path based on resource
   end
 end

@@ -1,0 +1,63 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js dash" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>TEDxIIITD</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="favicon.ico" rel="shortcut icon" />
+        <link href="apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <%= stylesheet_link_tag 'app', media: 'all' %>
+        <%= javascript_include_tag 'application' %>
+        <%= csrf_meta_tags %>        
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+   
+    <div class="container-fluid">
+        <div><%= image_tag("tedx-iiitd-logo.png", class: "logo-tedx-dash img-responsive") %></div>
+      <div class="center"><%= current_user %><%= link_to "Logout",destroy_user_session_path,:class => "btn" %></div>
+      <h1 class="center">Ticket Booking for TEDxIIITD - 12th April 2015.</h1>
+      <div class="row"><div class="center col-md-12"><div id="bookbutton">BOOK</div></div></div>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Sale</th>
+            <th>User</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @tickets.each do |ticket| %>
+            <tr>
+              <td><%= ticket.sale %></td>
+              <td><%=link_to ticket.user , ticket.user%></td>
+              <td><%= ticket.status %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+    </div>
+
+    </body>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#bookbutton').click(function(){
+          $.get( "/tickets/new" );
+        });
+      });
+    </script>
+</html>

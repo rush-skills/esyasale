@@ -15,8 +15,8 @@ class Ticket < ActiveRecord::Base
   belongs_to :sale
   validates_associated :sale
 
-  validate :validate_user
-  validate :validate_time
+  validate :validate_user, :on => :create
+  validate :validate_time, :on => :create
   def validate_user
     unless Ticket.where(user_id: self.user_id).empty?
        errors.add(:id, 'Error - You have already booked a ticket')

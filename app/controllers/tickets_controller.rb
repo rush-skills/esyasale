@@ -26,7 +26,7 @@ class TicketsController < ApplicationController
     authorize @ticket
     @ticket.paid = true
     @ticket.save!
-    redirect_to ticket_path
+    redirect_to tickets_path
   end
 
   #GET /tickets/:id/blocked
@@ -34,7 +34,7 @@ class TicketsController < ApplicationController
     authorize @ticket
     @ticket.blocked = true
     @ticket.save!
-    redirect_to ticket_path
+    redirect_to tickets_path
   end
 
   #get /dashboard

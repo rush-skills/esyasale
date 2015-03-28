@@ -2,13 +2,13 @@
 
 <h1>Listing Tickets</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Sale</th>
       <th>User</th>
       <th>Status</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -16,10 +16,10 @@
     <% @tickets.each do |ticket| %>
       <tr>
         <td><%= ticket.sale %></td>
-        <td><%= ticket.user %></td>
+        <td><%=link_to ticket.user , ticket.user%></td>
         <td><%= ticket.status %></td>
-        <td><%= link_to 'Paid', paid_path(ticket) %></td>
-        <td><%= link_to 'Blocked', Blocked_path(ticket) %></td>
+        <td><%= link_to 'Paid', paid_path(ticket), :class => "btn btn-sm btn-primary" unless ticket.paid %></td>
+        <td><%= link_to 'Blocked', blocked_path(ticket), :class => "btn btn-sm btn-primary" unless ticket.blocked %></td>
       </tr>
     <% end %>
   </tbody>

@@ -27,6 +27,9 @@ class User < ActiveRecord::Base
   has_one :ticket
   has_many :sale
 
+  def to_s
+    name
+  end
   def set_default_role
     self.role ||= :user
   end

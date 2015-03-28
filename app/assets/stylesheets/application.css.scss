@@ -10,17 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require framework_and_overrides
+ *= require main
  *= require bootstrap-datetimepicker.min
  *= require_self
  */
-.center{
-	text-align: center;
-	vertical-align: center;
-}
-html,body,main{
-	background: #eee;
-}
-main{
-	padding: 3%;
-}

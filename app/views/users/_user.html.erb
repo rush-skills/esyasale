@@ -1,6 +1,16 @@
 <td>
   <%= link_to user.email, user %>
+</td> 
+<td>
+  Current Login: <%= user.current_sign_in_at.to_s(:short) if  user.current_sign_in_at%>
 </td>
+<td>
+  Last Login: <%= user.last_sign_in_at.to_s(:short) if user.last_sign_in_at %>
+</td>
+<td>
+  Login Count: <%= user.sign_in_count %>
+</td>
+
 <td>
   <%= form_for(user) do |f| %>
     <%= f.select(:role, User.roles.keys.map {|role| [role.titleize,role]}) %>

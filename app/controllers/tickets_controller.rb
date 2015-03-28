@@ -39,7 +39,7 @@ class TicketsController < ApplicationController
 
   #get /dashboard
   def dashboard
-    @tickets = Tickets.all
+    @tickets = Ticket.all
     authorize @tickets
     @ticket = current_user.ticket
   end

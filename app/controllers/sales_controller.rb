@@ -24,7 +24,6 @@ class SalesController < ApplicationController
   end
 
   # POST /sales
-  # POST /sales.json
   def create
     @sale = Sale.new(sale_params)
     authorize  @sale
@@ -32,38 +31,31 @@ class SalesController < ApplicationController
     respond_to do |format|
       if @sale.save
         format.html { redirect_to sales_url, notice: 'Sale was successfully created.' }
-        format.json { render :show, status: :created, location: sales_url }
       else
         format.html { render :new }
-        format.json { render json: @sale.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # PATCH/PUT /sales/1
-  # PATCH/PUT /sales/1.json
   def update
     authorize  @sale
     @sale.user ||= current_user
     respond_to do |format|
       if @sale.update(sale_params)
         format.html { redirect_to sales_url, notice: 'Sale was successfully updated.' }
-        format.json { render :show, status: :ok, location: sales_url }
       else
         format.html { render :edit }
-        format.json { render json: @sale.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # DELETE /sales/1
-  # DELETE /sales/1.json
   def destroy
     authorize  @sale
     @sale.destroy
     respond_to do |format|
       format.html { redirect_to sales_url, notice: 'Sale was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

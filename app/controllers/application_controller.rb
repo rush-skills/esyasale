@@ -3,10 +3,21 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   def new_session_path(scope=nil)
-    '/auth/google_oauth2'
+    '/users/auth/google_oauth2'
   end
   def session_path(scope=nil)
-    '/auth/google_oauth2'
+    '/users/auth/google_oauth2'
+  end
+  def root_path
+    if current_user 
+      if current_user.admin?
+        "/"
+      else
+        "/dashboard"
+      end
+    else
+      "/"
+    end
   end
 
   include Pundit

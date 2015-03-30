@@ -14,7 +14,7 @@
 class Sale < ActiveRecord::Base
   belongs_to :user
   has_many :tickets 
-  validate :validate_ticket_count, :on => :create
+  validate :validate_ticket_count
   validates :quantity, :presence => true
   validates :end, :presence => true
   validates :start, :presence => true

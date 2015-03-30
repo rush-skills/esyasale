@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   resources :sales, except: [:show]
 
-  mount Upmin::Engine => '/admin'
   root to: 'visitors#index'
   resources :users
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }

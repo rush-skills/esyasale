@@ -3,7 +3,6 @@ class TicketsController < ApplicationController
   after_action :verify_authorized
   before_filter :authenticate_user!
 
-  include ApplicationHelper
   # GET /tickets
   # GET /tickets.json
   def index

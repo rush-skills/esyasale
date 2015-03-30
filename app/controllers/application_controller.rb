@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  include ApplicationHelper
   def new_session_path(scope=nil)
     '/users/auth/google_oauth2'
   end
@@ -24,7 +26,11 @@ class ApplicationController < ActionController::Base
   	'/'
   end
   def after_sign_in_path_for(resource)
-    '/dashboard'
+    if current_user.admin?
+      '/tickets'
+    else
+      '/dashboard'
+    end
     # return the path based on resource
   end
 end

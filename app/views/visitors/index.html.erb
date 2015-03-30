@@ -70,7 +70,6 @@
       <div id="about" class="pad-section">
         <div class="container-fluid">
           <div class="row">
-          	<%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
             <div class="col-sm-6">
               <h2>What is TED?</h2>
               <p class="lead">TED is a non-profit organization devoted to Ideas Worth Spreading. It started out in 1984 as a conference bringing together people from three worlds- Technology, Entertainment and Design. Since then its scope has become ever broader. Along with two annual conferences - the TED Conference in Long Beach and Palm Springs each spring, and the TED Global Conference in Edinburgh UK each summer - TED includes the award-winning TED Talks video site, the Open Translation Project and TED Conversations, the inspiring TED Fellows and TEDx programs, and the annual TED Prize.</p>
@@ -96,6 +95,16 @@
         </div>
       </div>
       <!-- /second section -->
+
+      <!-- NEW BOOKING SECTION -->
+
+      <div id="booking" class="">
+    	 <%= link_to user_omniauth_authorize_path(:google_oauth2) do %>
+        <%=image_tag "Tickets.jpg" %>
+      <% end %>
+      </div>
+      <!-- /BOOKING -->
+
       <!-- third section - Speakers -->
       <div id="speakers" class="pad-section">
         <div class="container-fluid">

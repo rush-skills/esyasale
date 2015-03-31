@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'yaml_db'
+gem 'mysql2'
 gem 'jbuilder', '~> 2.0'
 gem "omniauth-google-oauth2"
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true

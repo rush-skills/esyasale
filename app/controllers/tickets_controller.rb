@@ -18,9 +18,13 @@ class TicketsController < ApplicationController
       authorize @ticket
       @ticket.user = current_user
       @ticket.sale = current_sale
-      @ticket.save!
+      if @ticket.save
+        redirect_to dashboard_path
+      else
+        flash[:error] = "Sorry all tickets sold out"
+        redirect_to dashboard_path
+      end
     end
-    redirect_to dashboard_path
   end
 
   #GET /tickets/:id/paid

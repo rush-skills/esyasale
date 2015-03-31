@@ -26,6 +26,12 @@
    
     <div class="container-fluid">
         <div><%= image_tag("tedx-iiitd-logo.png", class: "logo-tedx-dash img-responsive") %></div>
+        <% if flash[:error] %>
+           <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <%= content_tag :div,  flash[:error] , :id => "flash_error" %>
+          </div>
+        <% end %>
       <div class="center"><%= current_user %><%= link_to "Logout",destroy_user_session_path,:class => "btn" %></div>
       <h1 class="center">Ticket Booking for TEDxIIITD - 12th April 2015.</h1>
       <hr>

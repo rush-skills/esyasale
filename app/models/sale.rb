@@ -19,6 +19,6 @@ class Sale < ActiveRecord::Base
   validates :start, :presence => true
   
   def to_s
-    self.start.strftime("%d/%m/%y - ")+ self.start.strftime("%d/%m/%y") + " : " + self.quantity.to_s + " tickets"
+    self.start.strftime("Sale on %d/%m/%y %H:%M for ") + self.quantity.to_s + " tickets"
   end
 end

@@ -47,6 +47,24 @@
           <h2 class="center">No sales in near future. Keep visiting our Facebook page for further updates</h2>
         <% else %>
           <h2 class="center">NEXT SALE ON: <%= future_sale.start.to_s(:short) %></h2>
+          <ul id="example">
+            <li><span class="days">00</span><p class="days_text">Days</p></li>
+            <li class="seperator">:</li>
+            <li><span class="hours">00</span><p class="hours_text">Hours</p></li>
+            <li class="seperator">:</li>
+            <li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
+            <li class="seperator">:</li>
+            <li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
+          </ul>
+          <script type="text/javascript">
+            $(document).ready(function(){
+              $('#example').countdown({
+              date: '<%= future_sale.start.strftime("%m/%d/%Y %H:%M:%S")%>'
+              }, function () {
+                alert('SALE IS ON!REFRESH THE PAGE!');
+              });
+            });
+          </script>
         <% end %>
       <% end %>
       <hr>
@@ -82,6 +100,7 @@
         $('#bookbutton').click(function(){
            window.location.href = "/tickets/new" ;
         });
+
       });
     </script>
 </html>

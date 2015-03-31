@@ -4,12 +4,8 @@
 /*
 
 	*= require_tree .
-
 */
-.center{
-	text-align: center;
-	vertical-align: middle;
-}
+
 html,body,main{
 	background: #eee;
 }
@@ -20,4 +16,77 @@ main{
 	font-size: 14px;
 	padding: 0px !important;
 	vertical-align: middle !important;
+}
+
+.logo-tedx-dash{
+	width: 100%;
+	max-width: 600px;
+	margin-top: -40px;
+	margin-bottom: -40px;
+}
+.dash head, .dash body, .dash main, .dash{
+	background: white;
+}
+#bookbutton{
+	max-width: 100%;
+	height: 100px;
+	background: rgb(255, 43, 6);
+	color: white;
+	font-size: 72px;
+	border: 1px solid black;
+	border-radius: 50px;
+	margin: 100px;
+}
+
+ul#example {
+  list-style: none;
+  margin: 50px 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+
+ul#example li { display: inline-block; }
+
+ul#example li span {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 80px;
+}
+
+ul#example li.seperator {
+  font-size: 80px;
+  line-height: 70px;
+  vertical-align: top;
+}
+
+ul#example li p {
+  color: #a7abb1;
+  font-size: 25px;
+}
+
+@media(max-width: 500px){
+	ul#example {
+	  list-style: none;
+	  margin: 20px 0;
+	  padding: 0;
+	  display: block;
+	  text-align: center;
+	}
+	ul#example li span {
+	  font-size: 40px;
+	  font-weight: 300;
+	  line-height: 40px;
+	}
+
+	ul#example li.seperator {
+	  font-size: 40px;
+	  line-height: 35px;
+	  vertical-align: top;
+	}
+
+	ul#example li p {
+	  color: #a7abb1;
+	  font-size: 15px;
+	}
 }

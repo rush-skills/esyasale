@@ -16,4 +16,5 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require pickers
+//= require jquery.countdown.min
 //= require_tree .

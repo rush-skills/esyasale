@@ -59,9 +59,9 @@
           <script type="text/javascript">
             $(document).ready(function(){
               $('#example').countdown({
-              date: '<%= future_sale.start.strftime("%m/%d/%Y %H:%M:%S")%>'
+              date: '<%= future_sale.start.utc.strftime("%m/%d/%Y %H:%M:%S")%>'
               }, function () {
-                alert('SALE IS ON!REFRESH THE PAGE!');
+                location.reload();
               });
             });
           </script>

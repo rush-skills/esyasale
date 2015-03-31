@@ -86,7 +86,7 @@
               <td><%= ticket.sale %></td>
               <td><%=link_to ticket.user , ticket.user%></td>
               <td><%= ticket.status %></td>
-              <td><%= ticket.created_at.to_s(:short) + ":" + ticket.created_at.sec.to_s %></td>
+              <td><%= ticket.created_at.to_s(:short) + ":" + ticket.created_at.strftime("%S") %></td>
             </tr>
           <% end %>
         </tbody>

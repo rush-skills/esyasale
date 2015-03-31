@@ -12,11 +12,16 @@
 #
 
 class Ticket < ActiveRecord::Base
-  belongs_to :sale
-  validates_associated :sale, :on => :create
-
+  belongs_to :sale  
+  validate :validate_ticket_count, :on => :create
   validate :validate_user, :on => :create
   validate :validate_time, :on => :create
+  def validate_ticket_count
+     if self.sale.tickets.count >= self.sale.quantity
+       errors.add(:id, 'Error - Max ticket limit reached for this sale')
+     end
+  end
+
   def validate_user
     unless Ticket.where(user_id: self.user_id).empty?
        errors.add(:id, 'Error - You have already booked a ticket')

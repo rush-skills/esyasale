@@ -13,9 +13,9 @@ class TicketsController < ApplicationController
 
   # GET /tickets/new
   def new
+    @ticket = Ticket.new
+    authorize @ticket
     if current_sale?
-      @ticket = Ticket.new
-      authorize @ticket
       @ticket.user = current_user
       @ticket.sale = current_sale
       if @ticket.save
@@ -24,6 +24,8 @@ class TicketsController < ApplicationController
         flash[:error] = "Sorry all tickets sold out"
         redirect_to dashboard_path
       end
+    else
+      redirect_to dashboard_path
     end
   end
 

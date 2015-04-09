@@ -16,7 +16,7 @@
         <%= stylesheet_link_tag 'application', media: 'all' %>
         <%= javascript_include_tag 'application' %>
         <%= javascript_include_tag 'map' %>
-        <%= csrf_meta_tags %>        
+        <%= csrf_meta_tags %>
         <!-- <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
@@ -32,8 +32,8 @@
 
         </script>
          <script type="text/javascript">
-        //   var _gaq = _gaq || [];  
-        //   _gaq.push(['_setAccount', 'UA-56123120-2']);  
+        //   var _gaq = _gaq || [];
+        //   _gaq.push(['_setAccount', 'UA-56123120-2']);
         //   _gaq.push(['_trackPageview']);
 
         //   (function() {
@@ -41,17 +41,17 @@
         //     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         //   })();
-        // </script> 
+        // </script>
     </head>
     <body>
       <!--[if lt IE 8]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
-   
+
       <!-- first section - Home -->
       <div id="home" class="home">
         <div class="text-vcenter1">
-          <div class="btm-home"> 
+          <div class="btm-home">
             <a href="#about" class="arrowicon pull-right"><i class="glyphicon glyphicon-chevron-down"></i><span></span></a>
           </div>
         </div>
@@ -132,7 +132,7 @@
               <h4><a href="http://www.eecs.harvard.edu/~rohan/Home.html">Dr. Rohan Murty</a> </h4>
               <p>Having a long list of fellowships at Harvard and MIT, Dr. Rohan Murty, son of the co-founder of Infosys- NR Narayana Murthy, has taken the initiative of Murty Classical Library. It's amazing how his interest spans not just the domain of computer science, but also humanities. He is an inspiration to all young engineers</p>
             </div>
-            
+
              <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="hexagon" style="background-image: url(<%= asset_path 'saurav.jpg' %>)">
                 <div class="face1"></div>
@@ -159,9 +159,16 @@
               <h4><a href="https://www.facebook.com/Shreya.Singhal.For.Freedom">Shreya Singhal</a></h4>
               <p>Petitioner Against Section 66A<br>Behind the spectacular verdict that shook India this month-Section 66A, was a 24 year old DU Law student- Shreya Singhal. Without the steadiness and commitment displayed by Shreya in challenging the restrictive and arbitrary 66A, and following due procedure, change could not have become possible - all it took was one strong individual to push for it.</p>
             </div>
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+              <div class="hexagon" style="background-image: url(<%= asset_path 'amit.jpg' %>)">
+                <div class="face1"></div>
+                <div class="face2"></div>
+              </div>
+              <h4><a href="https://www.facebook.com/AmitTheComic">Amit Tandon</a></h4>
+              <p>Stand Up Comedian<br>An engineer and MBA by qualification, Amit Tandon is known as “the married guy” in the stand-up comedy circuit. Switching effortlessly between Hindi and English, Amit's humor is universal - connecting with all segments of audience, be it middle aged, young at heart to young college going crowds. Amit is also a regular at the Best of Stand up lineup at Comedy Store, Mumbai.</p>
+            </div>
           </div>
-            
-          
+
           </div>
         </div>
       </div>
@@ -190,7 +197,7 @@
         </div>
       </div>
       <!-- /fourth section -->
-      
+
       <!-- fifth section - Schedule -->
       <div id="schedule" class="">
         <div class="container-fluid">
@@ -198,20 +205,29 @@
         <h1 id="timeline">Schedule</h1>
     </div>
     <ul class="timeline">
+        <li class="timeline-inverted">
+          <div class="timeline-badge"><i class="glyphicon glyphicon-info-sign"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Entry</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2:30 P.M.</small></p>
+            </div>
+          </div>
+        </li>
         <li>
           <div class="timeline-badge"><i class="glyphicon glyphicon-user"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">Entry</h4>
+              <h4 class="timeline-title">Details and Introduction</h4>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3:00 P.M.</small></p>
             </div>
           </div>
         </li>
         <li class="timeline-inverted">
-          <div class="timeline-badge"><i class="glyphicon glyphicon-info-sign"></i></div>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">Details and Introduction</h4>
+              <h4 class="timeline-title">Amit Tandon</h4>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 3:30 P.M.</small></p>
             </div>
           </div>
@@ -220,7 +236,7 @@
           <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">1st Speaker</h4>
+              <h4 class="timeline-title">Shreya Singhal</h4>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 4:00 P.M.</small></p>
             </div>
           </div>
@@ -229,7 +245,7 @@
           <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">2nd Speaker</h4>
+              <h4 class="timeline-title">Chaanv</h4>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 4:25 P.M.</small></p>
             </div>
           </div>
@@ -238,7 +254,7 @@
           <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">3rd Speaker</h4>
+              <h4 class="timeline-title">Saurav Kumar</h4>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 4:50 P.M.</small></p>
             </div>
           </div>
@@ -255,8 +271,7 @@
         <li>
           <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
           <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">4th Speaker</h4>
+            <div class="timeline-heading">Rohan Murty</h4>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 6:00 P.M.</small></p>
             </div>
           </div>
@@ -265,7 +280,7 @@
           <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">5th Speaker</h4>
+              <h4 class="timeline-title">Shilpa Singh</h4>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 6:25 P.M.</small></p>
             </div>
           </div>
@@ -274,7 +289,7 @@
           <div class="timeline-badge"><i class="glyphicon glyphicon-bullhorn"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
-              <h4 class="timeline-title">6th Speaker</h4>
+              <h4 class="timeline-title">RJ Naved</h4>
               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 6:50 P.M.</small></p>
             </div>
           </div>
@@ -532,7 +547,7 @@
                   <i class="fa fa-facebook-official"></i>
                 </a>
               </p>
-            </div>           
+            </div>
           </div>
         </div>
       </div>

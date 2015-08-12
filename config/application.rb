@@ -27,6 +27,5 @@ module Tedx
     config.active_record.default_timezone = :local
 
     config.middleware.use Rack::Deflater
-    config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
   end
 end

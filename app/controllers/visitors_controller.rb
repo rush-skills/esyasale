@@ -6,7 +6,7 @@ class VisitorsController < ApplicationController
 	def redirect_if_user_signed_in
 		if user_signed_in?
 			unless current_user.admin?
-				redirect_to '/dashboard'
+				redirect_to '/comedynight/dashboard'
 			end
 		end
 	end

@@ -13,7 +13,7 @@
 
 class Sale < ActiveRecord::Base
   belongs_to :user
-  has_many :tickets 
+  has_many :tickets, dependent: :destroy
   validates :quantity, :presence => true
   validates :end, :presence => true
   validates :start, :presence => true

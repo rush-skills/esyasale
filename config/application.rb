@@ -25,5 +25,8 @@ module Tedx
     config.active_record.raise_in_transactional_callbacks = true
     config.time_zone = 'New Delhi' 
     config.active_record.default_timezone = :local
+
+    config.middleware.use Rack::Deflater
+    config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
   end
 end

@@ -1,9 +1,9 @@
 TEDxIIITD
 ================
 
-Website live at http://tedx.iiitd.edu.in
+Website live at http://esya.iiitd.edu.in
 
-The official website and ticketing portal of TEDxIIITD.
+The Comedy Night ticket flash sale portal of Esya'15.
 
 Ruby on Rails
 -------------
@@ -16,4 +16,4 @@ This application requires:
 
 License
 -------
-Property Of TEDxIIITD and IIIT-Delhi 
+Property Of Esya and IIIT-Delhi 

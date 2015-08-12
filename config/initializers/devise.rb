@@ -10,7 +10,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'tedx@iiitd.ac.in'
+  config.mailer_sender = 'esya@iiitd.ac.in'
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
@@ -232,7 +232,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :google_oauth2, "935980948911-992m16lh825vsc071rcv9drd2r92g698.apps.googleusercontent.com", "sOZ_bEf3odKLEWxvmQRvkFE9"
+  config.omniauth :google_oauth2,ENV["GOOGLE_APP_ID"], ENV["GOOGLE_APP_SECRET"]
 
 
   # ==> Warden configuration

@@ -16,49 +16,46 @@ ActiveRecord::Schema.define(version: 20150326004249) do
   create_table "sales", force: :cascade do |t|
     t.datetime "start"
     t.datetime "end"
-    t.integer  "quantity",   limit: 4
-    t.integer  "user_id",    limit: 4
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.integer  "quantity"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "sales", ["user_id"], name: "index_sales_on_user_id", using: :btree
+  add_index "sales", ["user_id"], name: "index_sales_on_user_id"
 
   create_table "tickets", force: :cascade do |t|
-    t.integer  "sale_id",    limit: 4
-    t.integer  "user_id",    limit: 4
-    t.boolean  "paid",       limit: 1
-    t.boolean  "blocked",    limit: 1
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.integer  "sale_id"
+    t.integer  "user_id"
+    t.boolean  "paid"
+    t.boolean  "blocked"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "tickets", ["sale_id"], name: "index_tickets_on_sale_id", using: :btree
-  add_index "tickets", ["user_id"], name: "index_tickets_on_user_id", using: :btree
+  add_index "tickets", ["sale_id"], name: "index_tickets_on_sale_id"
+  add_index "tickets", ["user_id"], name: "index_tickets_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name",                   limit: 255
-    t.integer  "role",                   limit: 4
-    t.string   "provider",               limit: 255
-    t.string   "uid",                    limit: 255
+    t.string   "name"
+    t.integer  "role"
+    t.string   "provider"
+    t.string   "uid"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
-  add_foreign_key "sales", "users"
-  add_foreign_key "tickets", "sales"
-  add_foreign_key "tickets", "users"
 end

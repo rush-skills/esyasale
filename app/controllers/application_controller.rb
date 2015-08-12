@@ -27,9 +27,9 @@ class ApplicationController < ActionController::Base
   end
   def after_sign_in_path_for(resource)
     if current_user.admin?
-      '/tickets'
+      '/comedynight/tickets'
     else
-      '/dashboard'
+      '/comedynight/dashboard'
     end
     # return the path based on resource
   end
